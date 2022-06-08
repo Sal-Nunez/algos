@@ -39,22 +39,30 @@
  * @param {string[]} strs
  * @return {string}
  */
-var longestCommonPrefix = function (strs) {
-    if (strs.length === 1) return strs[0];
+// var longestCommonPrefix = function (strs) {
+//     if (strs.length === 1) return strs[0];
+//     if (strs[0].length < 1) return ""
+//     let prefix = ""
+//     for (let i = 0; i < strs[0].length; i++) {
+//         prefix += strs[0][i]
+//         for (let j = 0; j < strs.length; j++) {
+//             if (!strs[j].includes(prefix)) {
+//                 return prefix.slice(0, prefix.length - 1)
+//             }
+//         }
+//     }
+//     return prefix
+// };
+
+const longestCommonPrefix = (strs) => {
     if (strs[0].length < 1) return ""
-    let prefix = ""
     for (let i = 0; i < strs[0].length; i++) {
-        prefix += strs[0][i]
-        for (let j = 0; j < strs.length; j++) {
-            if (strs[j] !== prefix[j]) {
-                return prefix.slice(0, prefix.length - 1)
-            }
-        }
+        for (let s of strs) if(s[i] !== strs[0][i]) return s.slice(0, i)
     }
-    return prefix
-};
+    return strs[0]
+}
 
 console.log(longestCommonPrefix(["", "", ""]))
-console.log(longestCommonPrefix(["flower","flower","flower","flower"]))
-console.log(longestCommonPrefix(["dog", "racecar", "car"]))
-console.log(longestCommonPrefix(["c","acc","ccc"]))
+console.log(longestCommonPrefix(["flower", "flower", "flower", "flower"]))
+console.log(longestCommonPrefix(["dog", "dacecar", "dar"]))
+console.log(longestCommonPrefix(["c", "acc", "ccc"]))

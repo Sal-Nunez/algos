@@ -12,7 +12,7 @@
 // fizzbuzz(5) --> [1, 2, "Fizz", 4, "Buzz"]
 // fizzbuzz(15) -->  [1, 2, "Fizz", 4, "Buzz"]
 
-const fizzbuzz = num => {
+const fizzBuzz = num => {
     let arr = [];
     for (let i = 1; i <= num; i++) i % 3 == 0 && i % 5 == 0 ? arr.push("FizzBuzz") : i % 3 == 0 ? arr.push("Fizz") : i % 5 == 0 ? arr.push("Buzz") : arr.push(i)
     return arr

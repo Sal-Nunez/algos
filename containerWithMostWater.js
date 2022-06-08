@@ -48,3 +48,14 @@ function containerWithMostWater(heights) {
     }
     return biggestContainer
 }
+
+const containerWithMostWater = (heights) => {
+    let biggestContainer = 0;
+    let i = 0
+    let j = heights.length -1
+    while (j > i) {
+        Math.max(biggestContainer, Math.min(heights[i], heights[j]) * (j - i))
+        heights[i] <= heights[j] ? i++ : j--
+    }
+    return biggestContainer
+}
