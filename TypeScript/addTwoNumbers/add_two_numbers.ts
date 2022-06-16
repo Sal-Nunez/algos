@@ -12,7 +12,6 @@ class ListNode {
 }
 
 // const addTwoNumbers = (l1: ListNode | null, l2: ListNode | null): ListNode | null => {
-
 //     let num = 0
 //     let trailing: string = ""
 //     let runner1: ListNode |null = l1
@@ -28,12 +27,9 @@ class ListNode {
 //         }
 //         trailing += "0"
 //     }
-
 //     let arr = num.toString().split("").reverse()
 //     arr.forEach(num => {
-
 //     })
-
 //     return null;
 // };
 
